@@ -45,6 +45,6 @@ import org.springframework.context.annotation.FilterType;
  *  @ComponentScan은 필터의 경우 개념 정도만 알아도 되지만 기본적으로 @Configuration 클래스가 위치한
  *  패키지와 해당 패키지 하위만 Scan하기 때문에 더 상위 범위나 다른 패키지를 Scan 하기 위해 주로 사용 된다.
 * */
-public class ContextConfiguration {
 
+public class ContextConfiguration {
 }
