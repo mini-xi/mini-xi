@@ -1,6 +1,7 @@
 package com.ohgiraffers.userservice.controller;
 
 import com.ohgiraffers.userservice.dto.UserDTO;
+import com.ohgiraffers.userservice.service.UserService;
 import com.ohgiraffers.userservice.vo.HelloVO;
 import com.ohgiraffers.userservice.vo.RequestUser;
 import com.ohgiraffers.userservice.vo.ResponseUser;
@@ -20,11 +21,14 @@ public class UserController {
 
     private ModelMapper modelMapper;
 
+    private UserService userService;
+
     @Autowired
-    public UserController(Environment env, HelloVO helloVo, ModelMapper modelMapper) {
+    public UserController(Environment env, HelloVO helloVo, ModelMapper modelMapper, UserService userService) {
         this.env = env;
         this.helloVo = helloVo;
         this.modelMapper = modelMapper;
+        this.userService = userService;
     }
 
     /* 설명.
@@ -37,7 +41,7 @@ public class UserController {
     @GetMapping("/health_check")
     public String status() {
         return "Server at " + env.getProperty("local.server.port")
-                + ", swcamp.message" + env.getProperty("swcamp.message");
+                + ", swcamp.message: " + env.getProperty("swcamp.message");
     }
 
     /* 설명. 2. @Value 활용해 설정값 불러오기(getter) */
@@ -49,12 +53,21 @@ public class UserController {
     /* 설명. 회원가입(POST - /users) */
     @PostMapping("/users")
     public ResponseEntity<ResponseUser> registUser(@RequestBody RequestUser user) {
+
+        /* 설명. RequestUser -> UserDTO */
         UserDTO userDTO = modelMapper.map(user, UserDTO.class);
         System.out.println("userDTO = " + userDTO);
 
 //        System.out.println("user = " + user);
 
-        ResponseUser responseUser = new ResponseUser();
+        /* 설명. 회원가입 비즈니스 로직 시작 */
+        userService.registUser(userDTO);
+
+//        ResponseUser responseUser = new ResponseUser();
+
+        /* 설명. UserDTO -> ResponseUser */
+        ResponseUser responseUser = modelMapper.map(userDTO, ResponseUser.class);
+
         return ResponseEntity.status(HttpStatus.CREATED).body(responseUser);
     }
 }
