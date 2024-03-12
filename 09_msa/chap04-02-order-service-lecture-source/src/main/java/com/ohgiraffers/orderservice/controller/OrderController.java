@@ -26,16 +26,15 @@ public class OrderController {
     @GetMapping("/orders/users/{userId}")
     public ResponseEntity<List<ResponseOrder>> getUserOrders(@PathVariable("userId") String userId) {
         List<OrderDTO> orderDTOList = orderService.getUserOrders(userId);
-//        orderDTOList.stream().forEach(System.out::println);
 
-        List<ResponseOrder> returnValue = orderDTOToResponseOrder(orderDTOList);
+        List<ResponseOrder> returnValue = orderDTOTOResponseOrder(orderDTOList);
 
 //        return ResponseEntity.status(HttpStatus.OK).build();
 
         return ResponseEntity.status(HttpStatus.OK).body(returnValue);
     }
 
-    private List<ResponseOrder> orderDTOToResponseOrder(List<OrderDTO> orderDTOList) {
+    private List<ResponseOrder> orderDTOTOResponseOrder(List<OrderDTO> orderDTOList) {
         List<ResponseOrder> responseList = new ArrayList<>();
 
         for (OrderDTO orderDTO : orderDTOList) {
@@ -49,4 +48,15 @@ public class OrderController {
 
         return responseList;
     }
+
 }
+
+
+
+
+
+
+
+
+
+

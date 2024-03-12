@@ -4,14 +4,17 @@ server:
 spring:
   application:
     name: swcamp-user-service
+
+  ## db config
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://localhost:3306/menudb
+    url: jdbc:mariadb://localhost:3307/menudb
     username: swcamp
     password: swcamp
 
-# jpa config
+  # jpa config
   jpa:
+#    generate-ddl: on
     hibernate:
       ddl-auto: create
     show-sql: true
@@ -19,31 +22,31 @@ spring:
     properties:
       hibernate:
         '[format_sql]': true
+
+# eureka.client.fetch-registry=true? eureka ????? ???? ???? ?????
+# ??? ?? ? ??? ???? ????.
 eureka:
   instance:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
   client:
-    fetch-registry: true
     register-with-eureka: true
+    fetch-registry: true
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://192.168.0.26:8761/eureka
 
-# yml
-# Create additional variables in yml file
-swcamp:
-  message: Let's do msa!
+## ?? ??? ?? ? ??
+greeting:
+  message: Welcome to the Simple E-commerce.
 
+## config 서버 추가 후 주석
 #token:
-#
-#  # JWT 토큰의 만료시간 설정(ms 단위)
-#  expiration_time: 43200000
-#
-#  # JWT 토큰의 Verify Signature를 위한 secret-key
+#  expiration_time: 86400000
 #  secret: l1Z5I9WufSD5qM0UTHXDJa1kaGxBlyhKMbx+ONkqzeRTlKdF8Bq37mA3Z8nhjRlwVUrL/u3bdkFeamIrUoWvVw==
 
-# actuator 추가 후
+## actuator 추가 후
 management:
   endpoints:
     web:
       exposure:
         include: refresh, health, beans
+

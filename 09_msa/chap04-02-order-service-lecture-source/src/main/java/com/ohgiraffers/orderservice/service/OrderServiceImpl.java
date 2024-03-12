@@ -13,6 +13,7 @@ import java.util.List;
 
 @Service
 public class OrderServiceImpl implements OrderService{
+
     private final OrderMapper orderMapper;
 
     @Autowired
@@ -27,13 +28,11 @@ public class OrderServiceImpl implements OrderService{
 
         List<OrderDTO> orderDTOList = orderToOrderDTO(orderList);
 
-        return null;
+        return orderDTOList;
     }
 
     private List<OrderDTO> orderToOrderDTO(List<Order> orderList) {
-
         List<OrderDTO> orderDTOList = new ArrayList<>();
-
         for (Order order : orderList) {
             OrderDTO orderDTO = new OrderDTO();
             orderDTO.setOrderDate(order.getOrderDate());

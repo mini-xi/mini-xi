@@ -4,7 +4,7 @@ import lombok.Data;
 
 import java.util.List;
 
-/* 설명. OrderMenu와 Collection관계(1:N 관계 조인용으로 작성) */
+/* 설명. OrderMenu와 Collection관계(1:N관계 조인용으로 작성) */
 @Data
 public class Order {
 

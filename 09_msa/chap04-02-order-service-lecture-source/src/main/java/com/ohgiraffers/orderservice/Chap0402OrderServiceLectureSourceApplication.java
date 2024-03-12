@@ -8,8 +8,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @EnableDiscoveryClient
 public class Chap0402OrderServiceLectureSourceApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(Chap0402OrderServiceLectureSourceApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(Chap0402OrderServiceLectureSourceApplication.class, args);
+    }
 
 }
