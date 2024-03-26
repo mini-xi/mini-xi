@@ -2,6 +2,7 @@ package com.example.oauthjwt.service;
 
 import com.example.oauthjwt.dto.*;
 import com.example.oauthjwt.entity.UserEntity;
+import com.example.oauthjwt.entity.UserGrade;
 import com.example.oauthjwt.repository.UserRepository;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
 import org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest;
@@ -50,30 +51,30 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
 
             UserEntity userEntity = new UserEntity();
             userEntity.setLoginId(loginId);
-            userEntity.setEmail(oAuth2Response.getEmail());
-            userEntity.setName(oAuth2Response.getName());
-            userEntity.setRole("ROLE_USER");
+            userEntity.setMemberEmail(oAuth2Response.getEmail());
+            userEntity.setMemberName(oAuth2Response.getName());
+            userEntity.setMemberGrade(UserGrade.ROLL_MEMBER);
 
             userRepository.save(userEntity);
 
             UserDTO userDTO = new UserDTO();
             userDTO.setLoginId(loginId);
             userDTO.setName(oAuth2Response.getName());
-            userDTO.setRole("ROLE_USER");
+            userDTO.setRole(userEntity.getMemberGrade());
 
             return new CustomOAuth2User(userDTO);
         }
         else {
 
-            existData.setEmail(oAuth2Response.getEmail());
-            existData.setName(oAuth2Response.getName());
+            existData.setMemberEmail(oAuth2Response.getEmail());
+            existData.setMemberName(oAuth2Response.getName());
 
             userRepository.save(existData);
 
             UserDTO userDTO = new UserDTO();
             userDTO.setLoginId(existData.getLoginId());
             userDTO.setName(oAuth2Response.getName());
-            userDTO.setRole(existData.getRole());
+            userDTO.setRole(existData.getMemberGrade());
 
             return new CustomOAuth2User(userDTO);
         }

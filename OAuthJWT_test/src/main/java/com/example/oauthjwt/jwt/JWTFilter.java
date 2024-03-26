@@ -2,6 +2,7 @@ package com.example.oauthjwt.jwt;
 
 import com.example.oauthjwt.dto.CustomOAuth2User;
 import com.example.oauthjwt.dto.UserDTO;
+import com.example.oauthjwt.entity.UserGrade;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.Cookie;
@@ -66,7 +67,7 @@ public class JWTFilter extends OncePerRequestFilter {
         //userDTO를 생성하여 값 set
         UserDTO userDTO = new UserDTO();
         userDTO.setLoginId(username);
-        userDTO.setRole(role);
+        userDTO.setRole(UserGrade.ROLL_MEMBER);
 
         //UserDetails에 회원 정보 객체 담기
         CustomOAuth2User customOAuth2User = new CustomOAuth2User(userDTO);
