@@ -2,7 +2,7 @@ package com.example.oauthjwt.config;
 
 import com.example.oauthjwt.jwt.JWTFilter;
 import com.example.oauthjwt.jwt.JWTUtil;
-//import com.example.oauthjwt.oauth2.CustomSuccessHandler;
+import com.example.oauthjwt.oauth2.CustomSuccessHandler;
 import com.example.oauthjwt.service.CustomOAuth2UserService;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.context.annotation.Bean;
@@ -22,15 +22,15 @@ import java.util.Collections;
 public class SecurityConfig {
 
     private final CustomOAuth2UserService customOAuth2UserService;
-//    private final CustomSuccessHandler customSuccessHandler;
+    private final CustomSuccessHandler customSuccessHandler;
     private final JWTUtil jwtUtil;
 
     public SecurityConfig(CustomOAuth2UserService customOAuth2UserService,
-//                          CustomSuccessHandler customSuccessHandler,
+                          CustomSuccessHandler customSuccessHandler,
                           JWTUtil jwtUtil) {
 
         this.customOAuth2UserService = customOAuth2UserService;
-//        this.customSuccessHandler = customSuccessHandler;
+        this.customSuccessHandler = customSuccessHandler;
         this.jwtUtil = jwtUtil;
     }
 
@@ -79,7 +79,7 @@ public class SecurityConfig {
                 .oauth2Login((oauth2) -> oauth2
                         .userInfoEndpoint((userInfoEndpointConfig) -> userInfoEndpointConfig
                                 .userService(customOAuth2UserService))
-//                        .successHandler(customSuccessHandler)
+                        .successHandler(customSuccessHandler)
                 );
 
         //경로별 인가 작업

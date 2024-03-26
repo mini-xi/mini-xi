@@ -35,17 +35,21 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
 
             oAuth2Response = new GoogleResponse(oAuth2User.getAttributes());
         }
+        else if (registrationId.equals("kakao")) {
+
+            oAuth2Response = new KakaoResponse(oAuth2User.getAttributes());
+        }
         else {
 
             return null;
         }
-        String username = oAuth2Response.getProvider()+" "+oAuth2Response.getProviderId();
-        UserEntity existData = userRepository.findByUsername(username);
+        String loginId = oAuth2Response.getProvider()+" "+oAuth2Response.getProviderId();
+        UserEntity existData = userRepository.findByLoginId(loginId);
 
         if (existData == null) {
 
             UserEntity userEntity = new UserEntity();
-            userEntity.setUsername(username);
+            userEntity.setLoginId(loginId);
             userEntity.setEmail(oAuth2Response.getEmail());
             userEntity.setName(oAuth2Response.getName());
             userEntity.setRole("ROLE_USER");
@@ -53,7 +57,7 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
             userRepository.save(userEntity);
 
             UserDTO userDTO = new UserDTO();
-            userDTO.setUsername(username);
+            userDTO.setLoginId(loginId);
             userDTO.setName(oAuth2Response.getName());
             userDTO.setRole("ROLE_USER");
 
@@ -67,7 +71,7 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
             userRepository.save(existData);
 
             UserDTO userDTO = new UserDTO();
-            userDTO.setUsername(existData.getUsername());
+            userDTO.setLoginId(existData.getLoginId());
             userDTO.setName(oAuth2Response.getName());
             userDTO.setRole(existData.getRole());
 
