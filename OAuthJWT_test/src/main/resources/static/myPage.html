@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 페이지</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.4/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+
+        .logo-image {
+            background-image: url("/image/logo1.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            background-color: black;
+        }
+        .btn {
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #ffea00;
+        }
+        .btn-login {
+            background-color: #ffffff;
+        }
+        .btn-signup {
+            background-color: #ffffff;
+        }
+        /* 버튼 컨테이너 추가 스타일 */
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* 세로 중앙 정렬 */
+        }
+        .button-container > button {
+            margin-bottom: 1rem; /* 버튼 간격 조정 */
+        }
+    </style>
+</head>
+<body class="bg-black flex items-center justify-center h-screen">
+<div class="text-center">
+    <div class="logo-image w-48 h-48 mb-8 mx-auto"></div>
+    <div class="button-container"> <!-- 버튼 컨테이너 추가 -->
+        <button class="btn btn-login w-48 h-12 rounded text-black font-bold mb-4" onclick="login()">LOGIN</button>
+        <button class="btn btn-signup w-48 h-12 rounded text-black font-bold" onclick="register()">회원가입</button>
+    </div>
+</div>
+
+<script>
+
+    function login() {
+        window.location.href = "http://localhost:8080/userLogin";
+    }
+
+    function register() {
+        window.location.href = "http://localhost:8080/register";
+    }
+</script>
+</body>
+</html>

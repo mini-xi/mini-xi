@@ -7,7 +7,14 @@ public class KakaoResponse implements OAuth2Response {
 
     public KakaoResponse(Map<String, Object> attribute) {
 
-        this.attribute = (Map<String, Object>) attribute.get("response");
+        if (attribute == null) {
+            System.out.println("attribute map is null!");
+        } else {
+            System.out.println("attribute map is not null");
+        }
+
+//        this.attribute = (Map<String, Object>) attribute.get("response");
+        this.attribute = attribute; // 수정된 코드
     }
 
     @Override
@@ -17,16 +24,32 @@ public class KakaoResponse implements OAuth2Response {
 
     @Override
     public String getProviderId() {
-        return attribute.get("").toString();
+
+        Object id = attribute.get("id");
+        return id != null ? id.toString() : null;
+
+//        return attribute.get("id").toString();
     }
 
     @Override
     public String getEmail() {
-        return attribute.get("email").toString();
+
+//        return attribute.get("email").toString();
+        Map<String, Object> kakaoAccount = (Map<String, Object>) attribute.get("kakao_account");
+        return kakaoAccount != null ? (String) kakaoAccount.get("email") : null;
     }
 
     @Override
     public String getName() {
-        return attribute.get("nickName").toString();
+
+//        Map<String, Object> properties = (Map<String, Object>) attribute.get("properties");
+//        return properties.get("nickname").toString();
+
+        Map<String, Object> properties = (Map<String, Object>) attribute.get("properties");
+        if (properties != null) {
+            Object nickname = properties.get("nickname");
+            return nickname != null ? nickname.toString() : null;
+        }
+        return null;
     }
 }
