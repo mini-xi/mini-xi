@@ -2,7 +2,7 @@
 
 # Seongmin Bae | mini-xi
 
-### Backend Engineer · Enterprise Systems · Infra & Operations-Oriented Problem Solver
+### Backend Engineer focused on Enterprise Systems, Reliability, and Practical Problem Solving
 
 I build and improve systems with a focus on **stability, maintainability, and real-world usability**.  
 My experience spans **backend development, enterprise system support, infrastructure operations, deployment automation, database optimization, and technical troubleshooting**.
@@ -36,7 +36,7 @@ My experience includes building backend services, supporting enterprise workflow
       <strong>Enterprise Systems</strong><br><br>
       - In-house system development<br>
       - Legacy system maintenance<br>
-      - Workflow-oriented feature support<br>
+      - ERP transition support<br>
       - Reporting / output handling<br>
       - Business-driven problem solving
     </td>
@@ -56,19 +56,58 @@ My experience includes building backend services, supporting enterprise workflow
 ## Tech Stack
 
 ### Languages
-`Java` `JavaScript` `Python` `SQL` `JSP`
+<p>
+  <img src="https://img.shields.io/badge/Java-222222?style=flat-square&logo=openjdk&logoColor=white" />
+  <img src="https://img.shields.io/badge/JavaScript-222222?style=flat-square&logo=javascript&logoColor=F7DF1E" />
+  <img src="https://img.shields.io/badge/Python-222222?style=flat-square&logo=python&logoColor=3776AB" />
+  <img src="https://img.shields.io/badge/SQL-222222?style=flat-square&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/JSP-222222?style=flat-square&logo=java&logoColor=white" />
+  <img src="https://img.shields.io/badge/PowerBuilder-222222?style=flat-square&logo=powerpages&logoColor=white" />
+</p>
 
 ### Backend
-`Spring Boot` `Spring Data JPA` `Spring Security` `OAuth2` `JWT` `REST API`
+<p>
+  <img src="https://img.shields.io/badge/Spring_Boot-222222?style=flat-square&logo=springboot&logoColor=6DB33F" />
+  <img src="https://img.shields.io/badge/Spring_Data_JPA-222222?style=flat-square&logo=spring&logoColor=6DB33F" />
+  <img src="https://img.shields.io/badge/Spring_Security-222222?style=flat-square&logo=springsecurity&logoColor=6DB33F" />
+  <img src="https://img.shields.io/badge/OAuth2-222222?style=flat-square&logo=auth0&logoColor=EB5424" />
+  <img src="https://img.shields.io/badge/JWT-222222?style=flat-square&logo=jsonwebtokens&logoColor=white" />
+  <img src="https://img.shields.io/badge/REST_API-222222?style=flat-square&logo=fastapi&logoColor=white" />
+</p>
 
 ### Database / Cache / Search
-`MySQL` `Oracle` `Redis` `Elasticsearch`
+<p>
+  <img src="https://img.shields.io/badge/MySQL-222222?style=flat-square&logo=mysql&logoColor=4479A1" />
+  <img src="https://img.shields.io/badge/Oracle-222222?style=flat-square&logo=oracle&logoColor=F80000" />
+  <img src="https://img.shields.io/badge/Redis-222222?style=flat-square&logo=redis&logoColor=DC382D" />
+  <img src="https://img.shields.io/badge/Elasticsearch-222222?style=flat-square&logo=elasticsearch&logoColor=005571" />
+</p>
 
 ### Infra / DevOps / Operations
-`AWS` `Docker` `GitHub Actions` `CI/CD` `Apache` `Tomcat` `CloudWatch` `Grafana`
+<p>
+  <img src="https://img.shields.io/badge/AWS-222222?style=flat-square&logo=amazonaws&logoColor=FF9900" />
+  <img src="https://img.shields.io/badge/Docker-222222?style=flat-square&logo=docker&logoColor=2496ED" />
+  <img src="https://img.shields.io/badge/GitHub_Actions-222222?style=flat-square&logo=githubactions&logoColor=2088FF" />
+  <img src="https://img.shields.io/badge/Apache-222222?style=flat-square&logo=apache&logoColor=D22128" />
+  <img src="https://img.shields.io/badge/Tomcat-222222?style=flat-square&logo=apachetomcat&logoColor=F8DC75" />
+  <img src="https://img.shields.io/badge/CloudWatch-222222?style=flat-square&logo=amazoncloudwatch&logoColor=FF4F8B" />
+  <img src="https://img.shields.io/badge/Grafana-222222?style=flat-square&logo=grafana&logoColor=F46800" />
+</p>
 
 ### Frontend / Tools
-`Vue.js` `Axios` `Git` `GitHub` `SVN` `Jira` `Slack` `Notion` `Postman` `JasperStudio` `PL/SQL Developer`
+<p>
+  <img src="https://img.shields.io/badge/Vue.js-222222?style=flat-square&logo=vuedotjs&logoColor=4FC08D" />
+  <img src="https://img.shields.io/badge/Axios-222222?style=flat-square&logo=axios&logoColor=5A29E4" />
+  <img src="https://img.shields.io/badge/Git-222222?style=flat-square&logo=git&logoColor=F05032" />
+  <img src="https://img.shields.io/badge/GitHub-222222?style=flat-square&logo=github&logoColor=white" />
+  <img src="https://img.shields.io/badge/SVN-222222?style=flat-square&logo=subversion&logoColor=809CC9" />
+  <img src="https://img.shields.io/badge/Jira-222222?style=flat-square&logo=jira&logoColor=0052CC" />
+  <img src="https://img.shields.io/badge/Slack-222222?style=flat-square&logo=slack&logoColor=4A154B" />
+  <img src="https://img.shields.io/badge/Notion-222222?style=flat-square&logo=notion&logoColor=white" />
+  <img src="https://img.shields.io/badge/Postman-222222?style=flat-square&logo=postman&logoColor=FF6C37" />
+  <img src="https://img.shields.io/badge/JasperStudio-222222?style=flat-square&logo=java&logoColor=white" />
+  <img src="https://img.shields.io/badge/PL%2FSQL_Developer-222222?style=flat-square&logo=oracle&logoColor=F80000" />
+</p>
 
 ---
 
@@ -77,6 +116,7 @@ My experience includes building backend services, supporting enterprise workflow
 - Built backend services with **Java / Spring Boot** in service-oriented projects
 - Worked on **enterprise system development and maintenance** in real business environments
 - Supported both **new feature development** and **legacy system improvement**
+- Experienced in **PowerBuilder-based legacy ERP maintenance** as well as newer in-house system development
 - Improved application performance through **query tuning, caching, and structural optimization**
 - Experienced in **deployment, logging, monitoring, and issue tracking**
 - Worked on practical output-related tasks such as **report templates, barcode/label handling, and printing support**
@@ -85,6 +125,11 @@ My experience includes building backend services, supporting enterprise workflow
 ---
 
 ## Featured Projects
+
+### S-ERP — In-house Enterprise Resource Planning System
+Currently contributing to the development and maintenance of an internal ERP environment in a real business setting.  
+Working on both **new in-house ERP features** and **legacy PowerBuilder-based ERP maintenance**, while supporting a gradual transition between systems.  
+This experience strengthened my understanding of enterprise workflows, operational stability, reporting/output requirements, and practical issue resolution in production-like environments.
 
 ### J4JG — Mentoring & Recruitment Platform
 Backend service development focused on usability and performance.  
