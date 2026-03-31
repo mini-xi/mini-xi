@@ -16,7 +16,7 @@ My experience spans **backend development, enterprise system support, infrastruc
 I am a backend-focused engineer who enjoys solving practical problems across both development and operations.  
 Rather than limiting myself to feature implementation alone, I pay close attention to how systems are deployed, maintained, and improved in real environments.
 
-My experience includes building backend services, supporting enterprise workflows, improving legacy systems, tuning databases, handling operational issues, and using AI as a practical engineering tool for productivity and structured problem-solving.
+My experience includes building backend services, supporting enterprise workflows, improving legacy systems, tuning databases, resolving operational issues, and using AI as a practical engineering tool for productivity and structured problem-solving. I have also taken leadership roles in multiple team projects, valuing collaboration, ownership, and effective communication throughout the development process.
 
 ---
 
@@ -121,6 +121,10 @@ My experience includes building backend services, supporting enterprise workflow
 - Experienced in **deployment, logging, monitoring, and issue tracking**
 - Worked on practical output-related tasks such as **report templates, barcode/label handling, and printing support**
 - Used AI to improve **documentation quality, troubleshooting flow, workflow support, and engineering productivity**
+- Took leadership roles in multiple team projects and coordinated development with a strong sense of ownership
+- Experienced in collaborative project environments, including communication, task coordination, and practical problem solving
+- Strong in troubleshooting and resolving real-world issues across development and operations
+- Actively use AI to improve documentation quality, issue analysis, workflow support, and engineering productivity
 
 ---
 
@@ -154,11 +158,12 @@ Participated in an AI-related service project, expanding my understanding of how
 
 ## Strengths
 
-- Thinking beyond implementation and considering **operation, maintenance, and long-term stability**
-- Balancing **technical structure** with **actual business workflow**
-- Solving issues through **analysis, communication, and iterative improvement**
-- Comfortable working in environments that include **legacy systems, operational constraints, and real user requirements**
-- Using AI not as a shortcut, but as a tool to improve **execution quality and engineering productivity**
+- Taking ownership in projects and contributing as both a developer and a team lead when needed
+- Strong in troubleshooting and resolving issues across development, deployment, and operations
+- Balancing technical structure with actual business workflow and real user requirements
+- Experienced in collaborative environments that require communication, coordination, and iterative improvement
+- Comfortable working with both modern backend stacks and legacy enterprise systems, including SVN-based workflows
+- Using AI not as a shortcut, but as a tool to improve execution quality, analysis depth, and engineering productivity
 
 ---
 
